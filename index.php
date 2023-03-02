@@ -8,6 +8,34 @@ require_once "functions.php";#подключаем необходимые фай
 
 db(DB_HOST,DB_USER,DB_PASSWORD,DB_NAME);#будет выполнять подключение базы данных
 
+#$categories#категории массив
+#$razd= #типы, предложения и спрос в моём случае
+#$user = # должны получить данные о пользователе если он авторизовался
+
+#теперь надо определить какой актион загрузить исходя из запроса пользователя
+$action = clear_str($_GET['action']);#эту штуку надо чистить каждый раз очищать запрос как бы. #будем запрос записывать из get local/bulletin_bord_auto/?action = main(главная страница)
+if(!$action ){
+    $action = "main";
+}
+
+#Теперь проверим а если есть такой фалй, то мы файл загрузи = )
+if(file_exists(ACTIONS.$action.".php")){ #если есть значит подгружаем
+    include ACTIONS.$action.".php";
+}
+else {
+    ACTIONS."main.php"; #Если нет файла
+}
+
+#подключаем шаблон
+require_once TEMPLATE."/index.php";
+
+
+
+
+
+
+
+
 
 
 
