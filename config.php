@@ -10,7 +10,7 @@ define("PREF",'auto_');#префикс перед таблицей
 
 
 define("SITE_NAME",'http://localhost/messbox');#Путь к нашему скрипту,адресу, сайта. хз чёт надо дополнить !
-define("TEMPLATE",'template/default/');#путь к шаблону к доске объявлений
+define("TEMPLATE",'tempalte/default/');#путь к шаблону к доске объявлений
 define("ACTIONS",'actions/');#путь к экшенам
 define("FILES",'files/');#путьк папке с файлами, для работы доски объявлений и так же изоображения для объявлений
 define("MINI",'files/mini/');#минниатюры изоображений путь такой(уменьшеная копия)

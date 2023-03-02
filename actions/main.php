@@ -1,2 +1,5 @@
 <?php
-echo "Hello main action ";
+$content = render(TEMPLATE."main.tpl",array("title"=>"hello"));
+
+
+

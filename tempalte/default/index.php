@@ -1,4 +1,4 @@
-<?php
+<?php #файл запускает все файлы html в один,
 include "header.tpl.php";
 include "menu.tpl.php";
 ?>
