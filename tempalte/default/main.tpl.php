@@ -1,5 +1,9 @@
-	<?=$title;?>
+
 				<h3 class="title_page">Объявления</h3>
+				<?if($_SESSION['msg']):?>
+                    <?=$_SESSION['msg'];?>
+                    <? unset($_SESSION['msg']);?>
+                <? endif;?>
 				<div class="t_mess">
 					<h4 class="title_p_mess"><a href="http://localhost/doska/?action=view_mess&amp;id=8">dffdfdgdfg dfg dfgdfgdfgdf g</a></h4>
 					<p class="p_mess_cat">

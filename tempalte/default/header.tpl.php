@@ -7,11 +7,20 @@
 <body>
 	<div id="karkas">
 		<div id="header">
-			<h2><a href="http://localhost/doska">Доска объявлений</a></h2>
+			<h2><a href="http://localhost/doska">Доска объявлений SterCar</a></h2>
 
 			<div id="auth">
-    Добро пожаловать[Viktor]
-|
-				<a href="http://localhost/doska/?action=login&amp;logout=1">Выход</a>
+                <?if(!$user) :?>
+                    <a href="?action=login">Вход</a>
+
+                    <a href="?action=registration">Регистрация</a>
+                <? else:?>
+                Добро пожаловать[<?=$user['name'];?>]
+                    |
+                    <a href="?action=login&logout=1">Выход</a>
+
+                <? endif;?>
+
+
 			</div>
 		</div>
